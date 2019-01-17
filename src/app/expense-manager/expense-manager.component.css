@@ -1,0 +1,81 @@
+.ng-valid[required], .ng-valid.required  {
+  border-bottom: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-bottom: 5px solid #a94442; /* red */
+}
+
+button{
+  width: 80px;
+}
+
+input{
+  width: 10vw;
+}
+
+.main-container{
+  min-height: 100px;
+  width: 70vw;
+  margin-left: 15%;
+  margin-top: 5vh;
+  padding-top: 25px;
+  border: 1px solid gainsboro;
+  box-shadow: 5px 10px 8px #888888;
+  border-radius: 8px;
+}
+
+#total-amount{
+  width: 140px;
+  height: 40px;
+  border-color: transparent;
+  margin-left: 50px;
+}
+.total-amount-noti{
+  width: 190px;
+  margin-left: 50px;
+}
+.boom{
+  height: 20px;
+}
+.start{
+  position: fixed;
+  margin-left: 58.8vw;
+  margin-top: -27px;
+}
+
+.entry-form{
+  width: 70vw;
+  margin-top: 50px;
+}
+
+.data_input{
+  background-color: transparent;
+  border: none;
+  color: black;
+  border-bottom: 1px solid grey;
+}
+input:focus{
+  outline-width: 0;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 69.9vw;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 160px;
+}
+
+tr:nth-child(even),tr:last-child {
+  background-color: whitesmoke;
+}
+
+.bill{
+  margin-top: 50px;
+}

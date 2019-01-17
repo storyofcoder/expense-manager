@@ -1,0 +1,99 @@
+<!--                                                                                                          jai shree ram
+  code is done my munny kumar
+-->
+<div class="main-container">
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group boom">
+      <input type="number" class="form-control" id="total-amount" placeholder="Initial Amount "
+             [readOnly]="start"
+             [(ngModel)]="initialTotal" name="total"
+             #total="ngModel">
+      <div *ngIf="total.value <= 0" class="alert alert-danger total-amount-noti">
+          Amount must be more than 0.
+      </div>
+    </div>
+    <button type="button" class="start btn btn-danger" (click)="taskStart()" [disabled]="!(total.value > 0) || start">Start</button>
+  </form>
+
+  <div class="entry-form" *ngIf="start">
+    <table>
+      <tr>
+        <th>Serial NO.</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let p of data">
+        <td>{{p.s_no}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.qty}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty * p.price}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="delete(p.s_no)">Remove</button>
+        </td>
+      </tr>
+      <tr>
+        <td>{{new_index + 1}}</td>
+        <td>
+          <input type="text" placeholder="Product Name" class="data_input" [(ngModel)]="productName"  autofocus>
+        </td>
+        <td>
+          <input type="number" placeholder="Quantity" class="data_input" [(ngModel)]="qty" >
+        </td>
+        <td>
+          <input type="number" placeholder="Price" class="data_input" [(ngModel)]="price">
+        </td>
+        <td [ngStyle]="{'color':(product_sum + ( qty * price )) <= initialTotal ? 'black' : 'red', 'font-weight':( product_sum + ( qty * price )) <= initialTotal ?'500':'600'}">
+          <span *ngIf="qty * price" > {{ qty * price }}</span>
+        </td>
+        <td>
+          <button type="button" class="btn btn-success" (click)="add()"
+                  [disabled]="!price || !qty || !productName || !(product_sum + ( qty * price ) <= initialTotal)">Add</button>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td colspan="4">
+          <div style="float: right">Total Sum: </div>
+        </td>
+        <td>
+          {{product_sum}}
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="end()">End</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="bill" *ngIf="!show_bill">
+    <table>
+      <tr>
+        <th>Serial NO.</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      <tr *ngFor="let p of data">
+        <td>{{p.s_no}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.qty}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty * p.price}}</td>
+      </tr>
+      <br>
+      <tr style="font-weight: 600">
+        <td colspan="4">
+          <div style="float: right;">Total Sum: </div>
+        </td>
+        <td>
+          {{product_sum}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
