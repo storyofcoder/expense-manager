@@ -1,8 +1,10 @@
 # Expense Manager
-Online money management software for personal finance, account . Preview future expenses and account balances based on previous spending patterns.
+> Online Grocery Shopping: Choose from a wide range of grocery, baby care products, personal care products, fresh fruits and vegetables online with guaranteed lowest prices on all your supermarket.
 
-<br>
+## General info
+This project is designed and implemented during my learning period of angular 2+ as a learning part.
 
+## Screenshots
 `` Start ``
 ![Start Page](https://raw.githubusercontent.com/storyofcoder/expense-manager/master/screenshot/start.jpg)
 
@@ -20,7 +22,24 @@ Online money management software for personal finance, account . Preview future 
 
 <br>
 
-## Angular 6
-``` Command to start run : ng serve ```
+## Technologies
+* Angular 2+
+* Json
 
+## Setup
+You can download my repo the run command: npm i -> to install dependencies and run command ng s -> to start angular server.
+
+## Features
+List of features ready and TODOs for future development
+* The project is well planned and designed. 
+* The main feature is logical part.
+
+
+## Status
+Project is: Completed.
+
+## Inspiration
+To create something exciting
+
+## Contact
 ```- Software Engineer: Munny Kumar  ```
