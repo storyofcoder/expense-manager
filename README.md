@@ -30,7 +30,7 @@ This project is designed and implemented during my learning period of angular 2+
 You can download my repo the run command: npm i -> to install dependencies and run command ng s -> to start angular server.
 
 ## Features
-List of features ready and TODOs for future development
+
 * The project is well planned and designed. 
 * The main feature is logical part.
 
